@@ -1,4 +1,5 @@
-import ReactMarkdown from "react-markdown";
+import React from 'react';
+import ReactMarkdown from 'react-markdown';
 
 const Main = ({ activeNote, onUpdateNote }) => {
   const onEditField = (field, value) => {
@@ -19,14 +20,14 @@ const Main = ({ activeNote, onUpdateNote }) => {
           id="title"
           placeholder="Note Title"
           value={activeNote.title}
-          onChange={(e) => onEditField("title", e.target.value)}
+          onChange={(e) => onEditField('title', e.target.value)}
           autoFocus
         />
         <textarea
           id="body"
           placeholder="Write your note here..."
           value={activeNote.body}
-          onChange={(e) => onEditField("body", e.target.value)}
+          onChange={(e) => onEditField('body', e.target.value)}
         />
       </div>
       <div className="app-main-note-preview">
